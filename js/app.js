@@ -21,9 +21,7 @@ const centerHeroText2 = () => {
     if (txtGold) {
       const txtGoldWidth = txtGold.offsetWidth;
 
-      heading.style.transform = `translateX(-${
-        txtGoldWidth - (18 / 100) * txtGoldWidth
-      }px)`;
+      heading.style.transform = `translateX(-${txtGoldWidth - 100}px)`;
     }
   });
 };

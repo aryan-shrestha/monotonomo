@@ -8,29 +8,46 @@ const heroTextAnimation = () => {
       scrollTrigger: {
         // markers: true,
         trigger: heroSection,
-        start: "top center",
-        end: "bottom center",
+        start: "top 60%",
+        end: "bottom 10%",
         toggleActions: "play play reverse reverse",
         scrub: true,
       },
     });
-    tl.to(heading, { marginLeft: 150, marker: true });
+    tl.to(heading, { marginLeft: 150 });
   });
 
   const headings2 = document.querySelectorAll(".heading-2");
   headings2.forEach((heading) => {
-    const tl = gsap.timeline({
+    const tl2 = gsap.timeline({
       scrollTrigger: {
-        // markers: true,
+        markers: false,
         trigger: heroSection,
-        start: "top center",
-        end: "bottom center",
+        start: "top 60%",
+        end: "bottom 10%",
         toggleActions: "play play reverse reverse",
         scrub: true,
       },
     });
-    tl.to(heading, { marginLeft: -150, marker: true });
+    tl2.to(heading, { marginLeft: -100 });
   });
 };
 
 heroTextAnimation();
+
+const smileyAnimation = () => {
+  const smiley = document.querySelector(".smiley");
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      markers: false,
+      trigger: smiley,
+      start: "top 95%",
+      end: "top 10%",
+      toggleActions: "play play reverse reverse",
+      scrub: true,
+    },
+  });
+  tl.to(smiley, { rotate: 0 });
+};
+
+smileyAnimation();
