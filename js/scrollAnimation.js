@@ -6,10 +6,10 @@ const heroTextAnimation = () => {
   headings.forEach((heading) => {
     const tl = gsap.timeline({
       scrollTrigger: {
-        // markers: true,
+        markers: false,
         trigger: heroSection,
-        start: "top 60%",
-        end: "bottom 10%",
+        start: "top 40%",
+        end: "bottom 0%",
         toggleActions: "play play reverse reverse",
         scrub: true,
       },
@@ -23,8 +23,8 @@ const heroTextAnimation = () => {
       scrollTrigger: {
         markers: false,
         trigger: heroSection,
-        start: "top 60%",
-        end: "bottom 10%",
+        start: "top 40%",
+        end: "bottom 0%",
         toggleActions: "play play reverse reverse",
         scrub: true,
       },
@@ -54,7 +54,7 @@ smileyAnimation();
 
 const sectionHireAnimation = () => {
   const body = document.querySelector("body");
-
+  const navLinks = document.querySelectorAll(".nav-link");
   const sectionHire = document.querySelector(".section-hire");
   const sectionHireText = sectionHire.querySelector(".heading");
   const sectionHireText2 = sectionHire.querySelector(".heading-2");
@@ -80,7 +80,10 @@ const sectionHireAnimation = () => {
     },
   });
 
-  tlBody.to(body, { backgroundColor: "#0f0f0f" }, "anim");
+  tlBody.to(body, { backgroundColor: "#0f0f0f" }, "bodyColor");
+  navLinks.forEach((navLink) => {
+    tlBody.to(navLink, { color: "white" }, "bodyColor");
+  });
   tl.to(sectionHireText, { marginLeft: 150 }, "anim");
   tl.to(sectionHireText2, { marginLeft: -100 }, "anim");
 };
