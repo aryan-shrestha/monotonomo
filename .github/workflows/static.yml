@@ -16,6 +16,6 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
-          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: . # Assuming your website files are in the root directory
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
+          folder: . # Assuming your website files are in the root directory
