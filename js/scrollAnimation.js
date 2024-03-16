@@ -2,7 +2,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const heroTextAnimation = () => {
   const heroSection = document.querySelector(".headline-txt");
-  const headings = document.querySelectorAll(".heading");
+  const headings = heroSection.querySelectorAll(".heading");
   headings.forEach((heading) => {
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -17,7 +17,7 @@ const heroTextAnimation = () => {
     tl.to(heading, { marginLeft: 150 });
   });
 
-  const headings2 = document.querySelectorAll(".heading-2");
+  const headings2 = heroSection.querySelectorAll(".heading-2");
   headings2.forEach((heading) => {
     const tl2 = gsap.timeline({
       scrollTrigger: {
@@ -51,3 +51,38 @@ const smileyAnimation = () => {
 };
 
 smileyAnimation();
+
+const sectionHireAnimation = () => {
+  const body = document.querySelector("body");
+
+  const sectionHire = document.querySelector(".section-hire");
+  const sectionHireText = sectionHire.querySelector(".heading");
+  const sectionHireText2 = sectionHire.querySelector(".heading-2");
+
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      markers: false,
+      trigger: sectionHire,
+      start: "top 60%",
+      end: "bottom 10%",
+      toggleActions: "play play reverse reverse",
+      scrub: true,
+    },
+  });
+
+  const tlBody = gsap.timeline({
+    scrollTrigger: {
+      markers: true,
+      trigger: sectionHire,
+      start: "top 60%",
+      end: "bottom 10%",
+      toggleActions: "play reverse play reverse",
+    },
+  });
+
+  tlBody.to(body, { backgroundColor: "#0f0f0f" }, "anim");
+  tl.to(sectionHireText, { marginLeft: 150 }, "anim");
+  tl.to(sectionHireText2, { marginLeft: -100 }, "anim");
+};
+
+sectionHireAnimation();

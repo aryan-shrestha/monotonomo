@@ -100,7 +100,8 @@ nav > ul {
   margin: 12vh 0vh;
 }
 
-.headline-txt > h1 {
+.heading,
+.heading-2 {
   white-space: nowrap;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -112,6 +113,10 @@ nav > ul {
 
 .txt-gold {
   color: #d1c9bc;
+}
+
+.txt-gold-dark {
+  color: rgba(209, 201, 188, 0.5);
 }
 
 .intro-text-section {
@@ -240,4 +245,29 @@ nav > ul {
   line-height: 1.8;
   font-weight: 500;
   text-transform: uppercase;
+}
+
+.section-hire {
+  margin-top: 18vh;
+}
+
+.section-hire h1 {
+  color: white;
+}
+
+.section-hire h1,
+.section-hire p,
+.section-hire a {
+  color: white;
+}
+
+.section-hire a::before {
+  background-color: white;
+}
+
+.container-full {
+  margin-top: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
