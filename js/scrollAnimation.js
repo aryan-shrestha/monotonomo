@@ -72,10 +72,10 @@ const sectionHireAnimation = () => {
 
   const tlBody = gsap.timeline({
     scrollTrigger: {
-      markers: true,
+      markers: false,
       trigger: sectionHire,
-      start: "top 60%",
-      end: "bottom 10%",
+      start: "top 80%",
+      end: "bottom 50%%",
       toggleActions: "play reverse play reverse",
     },
   });
