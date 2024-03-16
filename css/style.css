@@ -125,14 +125,31 @@ nav > ul {
   font-size: 2.5vw;
   font-weight: 400;
   padding-right: 5%;
-  line-height: 1.4;
-  letter-spacing: 2px;
+  line-height: 1.5;
+  letter-spacing: 4px;
   color: #0f0f0f;
 }
 
 .link {
   color: #0f0f0f;
-  text-underline-offset: 4px;
+  transition: all ease-in-out 0.3s;
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.link::before {
+  position: absolute;
+  bottom: 2px;
+  content: "";
+  padding: 1px;
+  width: 100%;
+  background-color: #0f0f0f;
+  transition: all ease-in-out 0.3s;
+}
+
+.link:hover::before {
+  padding-top: 8px;
 }
 
 /* --------------------- project section */
@@ -183,15 +200,44 @@ nav > ul {
 
 .section-home-time {
   margin-top: 10vh;
+  display: flex;
+  justify-content: flex-end;
 }
 
-.smiley-container {
-  display: flex;
-  width: 100%;
-  justify-content: center;
+.container-half {
+  width: 50%;
+}
+
+.smiley {
+  margin-bottom: 8vh;
 }
 
 .smiley {
   height: 20vh;
   rotate: 180deg;
+}
+
+.clock-container {
+  font-size: 2.5vw;
+  color: #d1c9bc;
+}
+
+.address-container > p,
+.address-container > a {
+  line-height: 1.4;
+  letter-spacing: 4px;
+  font-size: 1.8vw;
+  font-weight: 300;
+  color: #0f0f0f;
+}
+
+.section-footer-container {
+  margin-top: 4vh;
+}
+
+.section-footer-content > h6 {
+  letter-spacing: 2px;
+  line-height: 1.8;
+  font-weight: 500;
+  text-transform: uppercase;
 }
