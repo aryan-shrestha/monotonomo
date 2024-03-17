@@ -54,7 +54,7 @@ nav > ul {
 
 .nav-link::before {
   content: "";
-  padding: 0.5px;
+  padding: 1px;
   width: 0%;
   position: absolute;
   bottom: -2px;
@@ -85,6 +85,7 @@ nav > ul {
 
 .small-txt-block-3 {
   margin-right: 8rem;
+  text-transform: uppercase;
 }
 
 .hero-section-header > h6,
