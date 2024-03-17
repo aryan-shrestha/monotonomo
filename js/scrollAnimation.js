@@ -6,7 +6,7 @@ const heroTextAnimation = () => {
   headings.forEach((heading) => {
     const tl = gsap.timeline({
       scrollTrigger: {
-        markers: true,
+        markers: false,
         trigger: heroSection,
         start: "top 40%",
         end: "bottom 0%",
